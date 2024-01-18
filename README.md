@@ -161,8 +161,8 @@ In this exercise, we'll refactor our application to use the [“Provider compone
 
 **Acceptance Criteria:**
 
-- Create a new component, `ToastProvider`, that will serve as the “keeper” for all toast-related state.
-  - To generate a new component, you can use the “new-component” script! Try tunning `npm run new-component ToastProvider` in the terminal.
+- Create a new component, `ToastShelf`, that will serve as the “keeper” for all toast-related state.
+  - To generate a new component, you can use the “new-component” script! Try tunning `npm run new-component ToastShelf` in the terminal.
 - Components that require the state should pull it from context with the `useContext` hook, rather than passing through props.
 - As we saw in the [“Provider Components” lesson](https://courses.joshwcomeau.com/joy-of-react/04-component-design/08.04-provider-component), we can also share _functions_ that allow consumers to alter the state. Consider making functions available that will create a new toast, or dismiss a specific toast.
 - This is a “refactor” exercise. The user experience shouldn't change at all.
@@ -282,7 +282,7 @@ useEscapeKey(() => {
 **Acceptance Criteria:**
 
 - We want to create a new generic hook that makes it easy to listen for `keydown` events in React. It's up to you to come up with the best “consumer experience”.
-- Because this is a generic hook, it shouldn't be stored with the `ToastProvider` component. Create a new `/src/hooks` directory, and place your new hook in there.
-- The `ToastProvider` component should use this new hook.
+- Because this is a generic hook, it shouldn't be stored with the `ToastShelf` component. Create a new `/src/hooks` directory, and place your new hook in there.
+- The `ToastShelf` component should use this new hook.
 - **Make sure there are no ESLint warnings.**
   - In VSCode, ESLint warnings are shown as squiggly yellow underlines. You can view the warning by hovering over the underlined characters, or by opening the “Problems” tab (`⌘` + `Shift` + `M`, or Ctrl + `Shift` + `M`).
